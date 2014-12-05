@@ -1,7 +1,7 @@
 name: part_generator
 version: 0.0.1
 author: "takyam <takayuki.yamaguch.m@gmail.com>"
-homepage: http://new.takyam.com/
+homepage: https://github.com/takyam-git/part_generator
 description: "Generate 'part **' list file."
 dependencies:
   analyzer: ">=0.22.4 <1.0.0"
