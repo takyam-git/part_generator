@@ -20,6 +20,7 @@ class Runner {
    * Runner's main process
    */
   void run() {
+
     //Check arguments that is help mode or invalid, then show help (and error messages)
     this._parseArguments();
     if (this._arguments.isEmpty || this._isHelpMode() || !this._validateArguments()) {
@@ -44,9 +45,13 @@ class Runner {
 
   void _parseArguments() {
     this._argParser
-      ..addOption('root', abbr: 'r', help: 'Set root directory path of target library.', valueHelp: '/path/to/library')
-      ..addOption('library-name', abbr: 'l', help: 'Set target library name.', valueHelp: 'library_name')
-      ..addFlag('help', abbr: 'h', help: 'This help.', negatable: false);
+        ..addOption(
+            'root',
+            abbr: 'r',
+            help: 'Set root directory path of target library.',
+            valueHelp: '/path/to/library')
+        ..addOption('library-name', abbr: 'l', help: 'Set target library name.', valueHelp: 'library_name')
+        ..addFlag('help', abbr: 'h', help: 'This help.', negatable: false);
     this._argResults = this._argParser.parse(this._arguments);
   }
 

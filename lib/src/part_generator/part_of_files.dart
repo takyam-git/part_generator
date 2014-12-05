@@ -37,7 +37,7 @@ class PartOfFiles extends Object with IterableMixin<FileSystemEntity> {
    *
    */
   PartOfFiles(String libraryName, String root, {String glob: '**.dart'})
-  : this._init(libraryName, root, glob);
+      : this._init(libraryName, root, glob);
 
   /**
    * Private constructor for initialize.

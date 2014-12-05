@@ -33,6 +33,7 @@ class PartGenerator {
     //result string container
     StringBuffer exportContent = new StringBuffer();
 
+
     //Get target dart files, and generate `part "relative/path/to/part_file.dart"` strings.
     this._files.forEach((File partFile) {
       exportContent.write('part "${path.relative(partFile.path, from: this._rootDirectoryPath)}";\n');

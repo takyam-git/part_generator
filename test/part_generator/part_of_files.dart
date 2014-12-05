@@ -10,12 +10,10 @@ void main() {
       PartOfFiles files = new PartOfFiles("example", "./example");
       List<String> parts = [];
       files.forEach((FileSystemEntity file) => parts.add(file.path));
-      expect(parts, unorderedEquals([
-          "./example/fuga.dart",
-          "./example/hoge/hoge.dart",
-          "./example/something/bar.dart",
-          "./example/something/foo.dart",
-      ]));
+      expect(
+          parts,
+          unorderedEquals(
+              ["./example/fuga.dart", "./example/hoge/hoge.dart", "./example/something/bar.dart", "./example/something/foo.dart",]));
     });
 
     test("absolute", () {
@@ -23,21 +21,17 @@ void main() {
       PartOfFiles files = new PartOfFiles("example", base);
       List<String> parts = [];
       files.forEach((FileSystemEntity file) => parts.add(file.path));
-      expect(parts, unorderedEquals([
-          "${base}/fuga.dart",
-          "${base}/hoge/hoge.dart",
-          "${base}/something/bar.dart",
-          "${base}/something/foo.dart",
-      ]));
+      expect(
+          parts,
+          unorderedEquals(
+              ["${base}/fuga.dart", "${base}/hoge/hoge.dart", "${base}/something/bar.dart", "${base}/something/foo.dart",]));
     });
 
     test("zero depth", () {
       PartOfFiles files = new PartOfFiles("example", "example", glob: "*.dart");
       List<String> parts = [];
       files.forEach((FileSystemEntity file) => parts.add(file.path));
-      expect(parts, unorderedEquals([
-          "example/fuga.dart",
-      ]));
+      expect(parts, unorderedEquals(["example/fuga.dart",]));
     });
   });
 }
