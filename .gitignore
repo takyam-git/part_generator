@@ -1,0 +1,9 @@
+*.iml
+/.idea
+/packages
+/pubspec.lock
+/.pub
+/dartdoc-viewer
+/docs
+/**/*/packages
+

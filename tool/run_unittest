@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# This package's tests must be run on package root. (../ == /path/to/part_generator)
+# This script set working directory for tests, and run unittest.
+
+BASE_DIR=$(dirname $0)/..
+TEST_DIR="${BASE_DIR}/test"
+PKG_DIR="${BASE_DIR}/packages"
+DART_CMD=`which dart`
+
+pushd $BASE_DIR > /dev/null
+$DART_CMD --ignore-unrecognized-flags --enable_async --checked --package-root=$PKG_DIR --trace_service_pause_events $TEST_DIR/run_all.dart
+popd > /dev/null
