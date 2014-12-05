@@ -1,5 +1,5 @@
 name: part_generator
-version: 0.0.1
+version: 0.0.1+
 author: "takyam <takayuki.yamaguch.m@gmail.com>"
 homepage: https://github.com/takyam-git/part_generator
 description: "Generate 'part **' list and output to console."

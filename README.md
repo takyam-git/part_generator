@@ -27,4 +27,8 @@ $ pub global run part_generator -r ./lib -l foo
 > part "foo/src/something.dart";
 ```
 
+## Pub
+
+https://pub.dartlang.org/packages/part_generator
+
 and, copy and paste to your library entry file.

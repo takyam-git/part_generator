@@ -1,3 +1,6 @@
+## 0.0.1+
+* Modify README for support pub.
+
 ## 0.0.1
 * Initial commit.
 * New Features
